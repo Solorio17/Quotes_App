@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
 
 @Component({
@@ -7,10 +6,6 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'library.html',
 })
 export class LibraryPage {
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  onCategories(){
-  }
 }
