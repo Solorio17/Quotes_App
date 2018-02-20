@@ -11,8 +11,6 @@ import { FavoritesPage } from "../pages/favorites/favorites"
 import { QuotesPage } from "../pages/quotes/quotes";
 import { QuotePage } from "../pages/quote/quote";
 
-
-
 @NgModule({
   declarations: [
     MyApp,
