@@ -18,7 +18,7 @@ quoteGroup: {category: string, quotes: Quote[], icon: string}
    this.quoteGroup = this.navParams.data;
  }
 
- onAddToFavorite(selectedQuote : Quote){
+ onAddToFavorites(selectedQuote : Quote){
    const alert = this.alertCrtl.create({
      title: "Add Quote",
      message: "Are you sure you want to favorite this quote?",
@@ -40,5 +40,13 @@ quoteGroup: {category: string, quotes: Quote[], icon: string}
    });
 
    alert.present();
+ }
+
+ onRemoveFromFavorites(quote: Quote){
+   this.quotesService.removeQuoteFromFavorites(quote)
+ }
+
+ isFavorite(quote : Quote){
+   return this.quotesService.isQuoteFavorite(quote)
  }
 }
