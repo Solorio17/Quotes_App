@@ -10,6 +10,7 @@ import { LibraryPage } from '../pages/library/library';
 import { FavoritesPage } from "../pages/favorites/favorites"
 import { QuotesPage } from "../pages/quotes/quotes";
 import { QuotePage } from "../pages/quote/quote";
+import { QuotesService } from "../services/quotes"
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { QuotePage } from "../pages/quote/quote";
     LibraryPage,
     FavoritesPage,
     QuotesPage,
-    QuotePage
+    QuotePage,
   ],
   imports: [
     BrowserModule,
@@ -31,12 +32,13 @@ import { QuotePage } from "../pages/quote/quote";
     LibraryPage,
     FavoritesPage,
     QuotesPage,
-    QuotePage
+    QuotePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QuotesService
   ]
 })
 export class AppModule {}
