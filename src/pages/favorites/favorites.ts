@@ -27,4 +27,14 @@ export class FavoritesPage {
       }
     })
   }
+
+  onRemoveFromFavorites(quote: Quote){
+    this.quotesService.removeQuoteFromFavorites(quote);
+    this.quotes = this.quotesService.getFavoriteQuotes()
+    //Another way to do it
+    // const position = this.quotes.findIndex((quoteEl : Quote) => {
+    //   return quoteEl.id == quote.id;
+    // });
+    // this.quotes.splice(position, 1)
+  }
 }
