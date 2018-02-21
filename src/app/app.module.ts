@@ -10,7 +10,10 @@ import { LibraryPage } from '../pages/library/library';
 import { FavoritesPage } from "../pages/favorites/favorites"
 import { QuotesPage } from "../pages/quotes/quotes";
 import { QuotePage } from "../pages/quote/quote";
-import { QuotesService } from "../services/quotes"
+import { QuotesService } from "../services/quotes";
+import { SettingsPage } from '../pages/settings/settings';
+import { SettingsService } from "../services/settings";
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { QuotesService } from "../services/quotes"
     FavoritesPage,
     QuotesPage,
     QuotePage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -33,12 +37,14 @@ import { QuotesService } from "../services/quotes"
     FavoritesPage,
     QuotesPage,
     QuotePage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuotesService
+    QuotesService,
+    SettingsService
   ]
 })
 export class AppModule {}
